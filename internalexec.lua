@@ -1,3 +1,5 @@
+print("Zot was here. You noticed too late.")
+
 if not game:IsLoaded() then
 	game.Loaded:Wait()
 end
