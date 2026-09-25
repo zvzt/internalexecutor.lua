@@ -1,6 +1,6 @@
 # Internal Executor UI
 
-A Roblox Luau script-editor interface with line numbers, scrolling, execution, clipboard support, file export controls, and clean window behavior.
+A Roblox Luau script editor with line numbers, scrolling, execution, clipboard support, file export controls, and a clean, draggable, minimizable interface.
 
 ## Usage
 
