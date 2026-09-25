@@ -1,12 +1,6 @@
 # Internal Executor UI
 
-A Roblox Luau script-editor interface with line numbers, scrolling, execution, clipboard support, file export controls, and Onyx-style window behavior.
-
-## Preview
-
-<img width="566" height="380" alt="Internal Executor UI" src="https://github.com/user-attachments/assets/771bbaeb-a408-4956-b948-9db2e81046ad" />
-
-<img width="529" height="37" alt="Internal Executor controls" src="https://github.com/user-attachments/assets/865d3a16-1f5b-483f-9751-19c3fc651327" />
+A Roblox Luau script-editor interface with line numbers, scrolling, execution, clipboard support, file export controls, and clean window behavior.
 
 ## Usage
 
@@ -16,7 +10,7 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/zvzt/internalexecutor
 
 ## Features
 
-- Onyx-style draggable editor window
+- clean Clean, draggable, minimizable editor window
 - Header-only minimize/restore behavior
 - Screen-edge drag clamping with `-57 / 57` vertical offsets
 - Line-number gutter
