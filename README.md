@@ -1,8 +1,6 @@
 # Internal Executor UI
 
-A Roblox Luau script-editor interface with line numbers, scrolling, clipboard support, and file export controls.
-
-> **Current status:** the editor UI is functional, but the **Execute** button is currently a placeholder and does not run the text inside the editor. That behavior is being kept documented until the execution logic is updated and tested.
+A Roblox Luau script-editor interface with line numbers, scrolling, execution, clipboard support, file export controls, and Onyx-style window behavior.
 
 ## Preview
 
@@ -18,17 +16,32 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/zvzt/internalexecutor
 
 ## Features
 
-- Draggable editor window
+- Onyx-style draggable editor window
+- Header-only minimize/restore behavior
+- Screen-edge drag clamping with `-57 / 57` vertical offsets
 - Line-number gutter
-- Horizontal and vertical scrolling
+- Horizontal and vertical editor scrolling
+- Execute button using `loadstring` when available
+- Compile errors and runtime errors are caught and reported
 - Clear button
 - Clipboard copy when `setclipboard` is available
 - File export when `writefile` is available
 - Compact status messages
+- Rerun cleanup prevents duplicate UI and input connections
+
+## Execution behavior
+
+The Execute button now runs the editor contents when the current environment exposes `loadstring`.
+
+- Compile failures are reported as **Compile error - check console**
+- Runtime failures are reported as **Runtime error - check console**
+- Successful runs report **Executed successfully**
 
 ## Compatibility
 
-Some controls depend on executor-specific functions. The UI handles unavailable clipboard and file-writing functions without requiring them to exist.
+Several controls depend on executor-specific functions. The UI handles unavailable execution, clipboard, and file-writing functions without assuming they exist.
+
+A synchronized deployment copy is maintained in `zxt.lol/public/internalexecutor.lua`.
 
 ## Files
 
